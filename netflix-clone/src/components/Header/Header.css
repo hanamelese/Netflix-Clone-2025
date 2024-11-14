@@ -1,0 +1,62 @@
+
+
+.header-outer-container{
+  align-items: center;
+    position: sticky;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 10vh;
+    background: black transparent;
+    transition:all 0.5s ;
+    transition-timing-function:ease-in ;
+    z-index: 1;
+}
+.nav-black{
+   background-color: rgb(175, 127, 221);
+}
+.header-container{
+width: 100%;
+display: flex;
+justify-content: space-between;
+text-align: center;
+background-color:black;
+color: white;
+}
+.header-left ul{
+  align-items: center;
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+}.header-right {
+  align-items: center;
+  display: flex;                /* Enable flexbox for horizontal layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;         /* Center items vertically */
+  width: 20%;                  /* Set width to 10% of the parent container */
+  padding-right:10px;            /* Optional: Add horizontal padding */
+  box-sizing: border-box;  
+  color: white;    /* Include padding in width calculation */
+}
+
+.header-right ul {
+  list-style: none;            /* Remove default bullet points */
+  padding: 0;                  /* Remove padding */
+  margin: 0;                   /* Remove margin */
+  display: flex;     
+  justify-content: space-between;  
+  background-color: black;  
+  height: 10vh; 
+  margin-right: 0px;
+  
+  color: white;
+     /* Use flexbox for the list items */
+}
+
+.header-right li {
+  width: 20%;  
+  padding-right: 20%;  
+  background-color: black;
+  color:white;      /* Add space between icons */
+}
