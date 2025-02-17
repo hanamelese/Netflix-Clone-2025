@@ -1,0 +1,28 @@
+.detail {
+    padding: 20px;
+    color: #fff;
+}
+
+.detail h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.detail p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.detail button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.detail button:hover {
+    background-color: #f40612;
+}
