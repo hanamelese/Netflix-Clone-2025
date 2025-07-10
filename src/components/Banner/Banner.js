@@ -9,11 +9,11 @@ const Banner = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchMovie = async () => {
+    (async () => {
       try {
         // Fetch movies from the API
         const response = await axios.get(request.fetchNetflixOriginal);
-        console.log(response.data); // Log the response for inspection
+        console.log(response.data); 
 
         // Check if results exist
         if (response.data.results && response.data.results.length > 0) {
@@ -33,9 +33,7 @@ const Banner = () => {
       } finally {
         setLoading(false);
       }
-    };
-
-    fetchMovie();
+    })();
   }, []);
 
   const truncate = (str, n) => {
@@ -55,11 +53,10 @@ const Banner = () => {
       className="Banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: movie?.backdrop_path
-          ? `url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`
-          : "none",
+        backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        
       }}
     >
       <div className="banner-contents">
@@ -67,9 +64,7 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner-button">
-          <a href="/rowlist">
-            <button className="banner-button play">Play</button>
-          </a>
+          <a href="/rowlist"> <button className="banner-button play">Play</button></a>
           <button className="banner-button">My List</button>
         </div>
         <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
