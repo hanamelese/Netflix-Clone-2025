@@ -64,8 +64,8 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner-button">
-          <a href="/rowlist"> <button className="banner-button play">Play</button></a>
-          <button className="banner-button">My List</button>
+          {/* <a href="/rowlist"> <button className="banner-button play">Play</button></a>
+          <button className="banner-button">My List</button> */}
         </div>
         <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
       </div>

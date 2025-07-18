@@ -11,10 +11,10 @@ const Header = () => {
         <div className='header-left'>
           <ul>
             <li><img src={NetflixLogo} alt='NETFLIX' width="100"></img></li>
-            <li><a href="/">Home </a></li>
+            {/* <li><a href="/">Home </a></li>
             <li><a href="/tvshow">TvShow </a></li>
             <li><a href="/romance">Romance </a></li>
-            <li><a href="/action">Action </a></li>
+            <li><a href="/action">Action </a></li> */}
           </ul>
         </div>
         <div className='header-right'>
