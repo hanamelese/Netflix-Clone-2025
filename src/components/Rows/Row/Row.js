@@ -58,15 +58,21 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         <div className="row">
             <h1>{title}</h1> {/* Fixed to display the title prop */}
             <div className='row-posters'>
-                {movies?.map((movie, index) => (
-                    <img
-                        onClick={() => handleClick(movie)}
-                        src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-                        alt={movie.name} 
-                      // className={`row-poster ${isLargeRow ? 'row-posterLarge' : ''}`}
-                    />
-                ))}
-            </div>
+  {movies?.map((movie, index) => {
+    const imgPath = isLargeRow ? movie.poster_path : movie.backdrop_path;
+    if (!imgPath) return null; // skip movies without images
+
+    return (
+      <img
+        key={movie.id || index}
+        onClick={() => handleClick(movie)}
+        src={`${base_url}${imgPath}`}
+        alt={movie.name}
+      />
+    );
+  })}
+</div>
+
             <div style={{ padding: '40px' }}>
                 {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />} {/* Fixed typo from 'vidioId' to 'videoId' */}
             </div>
